@@ -43,7 +43,7 @@ def get_bs(url):
 
 @timeout(3600)
 def get_content(start_date=now):
-    # 陕西省工业和信息化厅
+
     url_index = 'http://gxt.shaanxi.gov.cn/webfile/tzgg/index.html'
 
     url_list, date_list, title_list = [], [], []

@@ -64,7 +64,7 @@ def get_content(start_date=now):
                     continue
                 page_turning = False
                 break
-            title = text.get_text(strip=True).strip().replace('·', '').replace('\n', '')  # 获取纯文本内容（不带html标签）
+            title = text['title'].strip().replace('·', '').replace('\n', '')  # 获取纯文本内容（不带html标签）
             if re.search(title_pattern, title):  # 匹配标签关键字
                 logger.info(f"{title}\t{date}")
                 url_list.append("https://kjt.sc.gov.cn/" + text['href'])
