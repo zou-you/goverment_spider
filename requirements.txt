@@ -2,3 +2,4 @@ requests
 pandas
 apscheduler
 bs4
+html5lib
