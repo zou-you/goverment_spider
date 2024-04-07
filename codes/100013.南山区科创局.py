@@ -56,23 +56,25 @@ def get_content(start_date=now):
 
     url_list, date_list, title_list = [], [], []
     page_turning = True  # 是否需要翻页
-    page_num = 1
+    page_num, news_num = 1, 0
+    url_base = "http://www.szns.gov.cn/nsqkcj/gkmlpt/api/all/15000?page={page_num}&sid=755407"
     while page_turning:
         logger.info(f"当前页：{page_num}")
 
         # 访问链接
-        url_index = f"http://www.szns.gov.cn/nsqkcj/gkmlpt/api/all/15000?page=1&sid=755407"
+        url_index = url_base.format_map({'page_num': page_num})
         response = get_response(url_index)
 
         # 解析json
         json_data = json.loads(response.text)
         articles = json_data.get("articles")
         for article in articles:
-
+            news_num += 1
             # 找出符合要求的时间以及标题
-            date = datetime.datetime.fromtimestamp(article['date']).strftime("%Y-%m-%d")
+            # date = datetime.datetime.fromtimestamp(article['date']).strftime("%Y-%m-%d")
+            date = article['created_at'].split(' ')[0]
             if date < start_date:
-                if page_num == 1:      # 首页前几条可能不是最新的
+                if news_num <= 20:      # 首页前几条可能不是最新的
                     continue
                 page_turning = False
                 break
@@ -83,8 +85,8 @@ def get_content(start_date=now):
                 date_list.append(date)
                 title_list.append(title)
 
-        # 不进行翻页查找
-        break
+        # 进行翻页查找
+        page_num += 1
 
     result = ''
     # 进入详情页查找关键字

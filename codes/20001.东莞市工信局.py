@@ -8,7 +8,6 @@ import re
 import argparse
 from bs4 import BeautifulSoup
 import random
-import json
 import sys 
 sys.path.extend(['.', '..'])
 
@@ -17,7 +16,7 @@ from utils import sleep_time, title_pattern, content_pattern, write_file, now, M
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 requests.packages.urllib3.disable_warnings()
 
-GOVERMENT = "南山区工信局"
+GOVERMENT = "东莞市工信局"
 
 
 def get_args():
@@ -35,14 +34,6 @@ def get_args():
     return parser.parse_args()
 
 
-def get_response(url):
-    headers = {'User-Agent': random.choice(MyHeaders)}
-    response = requests.get(url, headers=headers, verify=False)
-    response.encoding = 'utf-8'
-    
-    return response
-
-
 def get_bs(url):
     headers = {'User-Agent': random.choice(MyHeaders)}
     response = requests.get(url, headers=headers, verify=False)
@@ -53,40 +44,43 @@ def get_bs(url):
 
 @timeout(3600)
 def get_content(start_date=now):
+    url_index = 'https://im.dg.gov.cn/dtxw/tzgg/index.html'
 
     url_list, date_list, title_list = [], [], []
     page_turning = True  # 是否需要翻页
-    page_num, news_num = 1, 0
-    url_base = "http://www.szns.gov.cn/nsqjjcjj/gkmlpt/api/all/15028?page={page_num}&sid=755408"
+    page_num = 1
     while page_turning:
         logger.info(f"当前页：{page_num}")
 
         # 访问链接
-        url_index = url_base.format_map({'page_num': page_num})
-        response = get_response(url_index)
+        bs = get_bs(url_index)
+        bs_list = bs.select("tbody tr td")
 
-        # 解析json
-        json_data = json.loads(response.text)
-        articles = json_data.get("articles")
-        for article in articles:
-            news_num += 1
-            # 找出符合要求的时间以及标题
-            # date = datetime.datetime.fromtimestamp(article['date']).strftime("%Y-%m-%d")
-            date = article['created_at'].split(' ')[0]
+        # 找出符合要求的时间以及标题
+        for i in range(0, 60, 3):
+            text = bs_list[i]
+            date = bs_list[i + 2].get_text(strip=True)
             if date < start_date:
-                if news_num <= 20:      # 首页前几条可能不是最新的
+                if page_num == 1:      # 首页前几条可能不是最新的
                     continue
                 page_turning = False
                 break
-            title = article.get("title", "").strip().replace("\n", '')
+            title = text.get_text(strip=True).strip().replace('·', '').replace('\n', '')  # 获取纯文本内容（不带html标签）
             if re.search(title_pattern, title):  # 匹配标签关键字
                 logger.info(f"{title}\t{date}")
-                url_list.append(article.get("url", ""))      # 需要拼接url
+                url_list.append(text.find('a').get('href'))
                 date_list.append(date)
                 title_list.append(title)
 
         # 进行翻页查找
-        page_num += 1
+        page_data = bs.find('a', {'class': 'next'})
+        if page_data and page_data['href'] != url_index:
+            url_index = page_data['href']
+            page_num += 1
+            # 随机睡眠
+            time.sleep(sleep_time)
+        else:
+            break
 
     result = ''
     # 进入详情页查找关键字
@@ -101,7 +95,7 @@ def get_content(start_date=now):
         time.sleep(sleep_time)
 
     # 写入文件
-    write_file(result, now, GOVERMENT, "南山区")
+    write_file(result, now, GOVERMENT, "市级")
 
 
 if __name__ == "__main__":

@@ -17,7 +17,7 @@ from utils import sleep_time, title_pattern, content_pattern, write_file, now, M
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 requests.packages.urllib3.disable_warnings()
 
-GOVERMENT = "南山区工信局"
+GOVERMENT = "东莞市发改局"
 
 
 def get_args():
@@ -57,10 +57,9 @@ def get_content(start_date=now):
     url_list, date_list, title_list = [], [], []
     page_turning = True  # 是否需要翻页
     page_num, news_num = 1, 0
-    url_base = "http://www.szns.gov.cn/nsqjjcjj/gkmlpt/api/all/15028?page={page_num}&sid=755408"
+    url_base = "https://dgdp.dg.gov.cn/gkmlpt/api/all/21?page={page_num}&sid=769006"
     while page_turning:
         logger.info(f"当前页：{page_num}")
-
         # 访问链接
         url_index = url_base.format_map({'page_num': page_num})
         response = get_response(url_index)
@@ -101,7 +100,7 @@ def get_content(start_date=now):
         time.sleep(sleep_time)
 
     # 写入文件
-    write_file(result, now, GOVERMENT, "南山区")
+    write_file(result, now, GOVERMENT, "市级")
 
 
 if __name__ == "__main__":
