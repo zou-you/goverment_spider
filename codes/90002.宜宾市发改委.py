@@ -16,7 +16,7 @@ from utils import sleep_time, title_pattern, content_pattern, write_file, now, M
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 requests.packages.urllib3.disable_warnings()
 
-GOVERMENT = "深圳市科创局"
+GOVERMENT = "宜宾市发改委"
 
 
 def get_args():
@@ -33,6 +33,7 @@ def get_args():
 
     return parser.parse_args()
 
+
 def get_bs(url):
     headers = {'User-Agent': random.choice(MyHeaders)}
     response = requests.get(url, headers=headers, verify=False)
@@ -43,7 +44,7 @@ def get_bs(url):
 
 @timeout(3600)
 def get_content(start_date=now):
-    url_index = 'http://stic.sz.gov.cn/xxgk/tzgg/index.html'
+    url_index = "https://fg.yibin.gov.cn/jjxx/zczz/"
 
     url_list, date_list, title_list = [], [], []
     page_turning = True  # 是否需要翻页
@@ -53,8 +54,8 @@ def get_content(start_date=now):
 
         # 访问链接
         bs = get_bs(url_index)
-        text_list = bs.select('li a[target]')
-        time_list = bs.select("li span")
+        text_list = bs.select(".STYLE14")
+        time_list = bs.select(".STYLE7 span")
 
         # 找出符合要求的时间以及标题
         for text, tim in zip(text_list, time_list):
@@ -67,14 +68,13 @@ def get_content(start_date=now):
             title = text['title'].strip().replace('·', '').replace('\n', '')  # 获取纯文本内容（不带html标签）
             if re.search(title_pattern, title):  # 匹配标签关键字
                 logger.info(f"{title}\t{date}")
-                url_list.append(text['href'])
+                url_list.append("https://fg.yibin.gov.cn/jjxx/zczz/" + text['href'])
                 date_list.append(date)
                 title_list.append(title)
 
         # 进行翻页查找
-        page_data = bs.find('a', {'class': 'next'})
-        if page_data and page_data['href'] != url_index:
-            url_index = page_data['href']
+        if page_num != 10:
+            url_index = f"https://fg.yibin.gov.cn/jjxx/zczz/index_{page_num}.html"
             page_num += 1
             # 随机睡眠
             time.sleep(sleep_time)

@@ -14,7 +14,7 @@ sys.path.extend(['.', '..'])
 from utils import sleep_time, title_pattern, content_pattern, write_file, now, MyHeaders, logger, timeout
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-
+requests.packages.urllib3.disable_warnings()
 
 GOVERMENT = "深圳市商务局"
 
