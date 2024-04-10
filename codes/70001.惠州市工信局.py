@@ -44,7 +44,7 @@ def get_bs(url):
 
 @timeout(3600)
 def get_content(start_date=now):
-    # 深圳市商务局
+
     url_index = 'https://gxj.huizhou.gov.cn/zwgk/bmwj/tzgg/index.html'
 
     url_list, date_list, title_list = [], [], []

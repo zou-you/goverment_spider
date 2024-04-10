@@ -14,9 +14,9 @@ sys.path.extend(['.', '..'])
 from utils import sleep_time, title_pattern, content_pattern, write_file, now, MyHeaders, logger, timeout
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+requests.packages.urllib3.disable_warnings()
 
-
-GOVERMENT = "深圳市商务局"
+GOVERMENT = "中山市工信局"
 
 
 def get_args():
@@ -45,7 +45,7 @@ def get_bs(url):
 @timeout(3600)
 def get_content(start_date=now):
 
-    url_index = 'http://commerce.sz.gov.cn/xxgk/qt/tzgg_1/index.html'
+    url_index = 'http://www.zs.gov.cn/gxj/tzgg/index.html'
 
     url_list, date_list, title_list = [], [], []
     page_turning = True  # 是否需要翻页
@@ -55,8 +55,8 @@ def get_content(start_date=now):
 
         # 访问链接
         bs = get_bs(url_index)
-        text_list = bs.select('li a.f-fl')
-        time_list = bs.select("li span.f-fr")
+        text_list = bs.select(".gov_list a")
+        time_list = bs.select(".gov_list span")
 
         # 找出符合要求的时间以及标题
         for text, tim in zip(text_list, time_list):
@@ -66,7 +66,7 @@ def get_content(start_date=now):
                     continue
                 page_turning = False
                 break
-            title = text['title'].strip().replace('·', '').replace('\n', '')  # 获取纯文本内容（不带html标签）
+            title = text.get_text(strip=True).strip().replace('·', '').replace('\n', '')  # 获取纯文本内容（不带html标签）
             if re.search(title_pattern, title):  # 匹配标签关键字
                 logger.info(f"{title}\t{date}")
                 url_list.append(text['href'])
