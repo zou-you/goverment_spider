@@ -15,6 +15,7 @@ from utils import sleep_time, title_pattern, content_pattern, write_file, now, M
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 requests.packages.urllib3.disable_warnings()
+
 GOVERMENT = "安徽省商务厅"
 
 
@@ -39,51 +40,52 @@ def get_bs(url):
     response.encoding = 'utf-8'
     bs = BeautifulSoup(response.text, 'html5lib')
 
-    return bs
+    return bs, response
 
 @timeout(3600)
 def get_content(start_date=now):
+    url_base = "https://commerce.ah.gov.cn/public/column/21711?type=4&catId=32712951&action=list&pageIndex={page_num}"
 
     url_list, date_list, title_list = [], [], []
     page_turning = True  # 是否需要翻页
-    page_num = 1
+    page_num, news_num = 1, 0
+
+    # 定义正则表达式
+    record_pattern = r'<li class="clearfix">\s*<a href="(.*?)" class="title" target="_blank">(.*?)</a>.*?<span class="date">(.*?)</span>'
+
     while page_turning:
         logger.info(f"当前页：{page_num}")
-        url_index = f"https://commerce.ah.gov.cn/site/search/26704321?isAllSite=false&platformCode=anhui_szbm_5&siteId=26704321&columnId=&columnIds=&typeCode=public_content&beginDate=&endDate=&fromCode=&keywords=&excColumns=&datecode=&sort=desc&type=&tableColumnId=&subkeywords=&ssqdDeptCode=&ssqdZoneCode=&orderType=1&indexNum=&fileNum=&pid=&language=cn&flag=false&searchType=&searchTplId=&fuzzySearch=true&internalCall=&pageIndex={page_num}&pageSize=10"
 
         # 访问链接
-        bs = get_bs(url_index)
-        text_list = bs.select(".search-title a")
-        time_list = bs.select(".date")
+        url_index = url_base.format_map({'page_num': page_num})
+        bs, response = get_bs(url_index)
+        html_content = response.text
+        
+        # 使用正则表达式进行匹配
+        records = re.findall(record_pattern, html_content, re.DOTALL)
 
         # 找出符合要求的时间以及标题
-        for text, tim in zip(text_list, time_list):
-            date = tim.get_text(strip=True).split('：')[1]
+        for record in records:
+            news_num += 1
+            href, title, date = record
             if date < start_date:
-                if page_num == 1:      # 首页前几条可能不是最新的
+                if news_num <= 10:      # 首页前几条可能不是最新的
                     continue
                 page_turning = False
                 break
-            title = text.get_text(strip=True).strip().replace('·', '').replace('\n', '')  # 获取纯文本内容（不带html标签）
             if re.search(title_pattern, title):  # 匹配标签关键字
                 logger.info(f"{title}\t{date}")
-                url_list.append(text['href'])
+                url_list.append(href)
                 date_list.append(date)
                 title_list.append(title)
 
         # 进行翻页查找
-        if page_num != 35:
-            page_num += 1
-            # 随机睡眠
-            time.sleep(sleep_time)
-        else:
-            break
+        page_num += 1
 
     result = ''
     # 进入详情页查找关键字
     for index, url_detail in enumerate(url_list):
-        # print(f"{title_list[index]}\t{date_list[index]}\t{url_detail}")
-        bs = get_bs(url_detail)
+        bs, response = get_bs(url_detail)
         text = bs.get_text(strip=True)
         match_res = set(content_pattern.findall(text))
         if match_res:
