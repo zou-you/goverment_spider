@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--GS_0001_C6-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script language="javascript" src="/module/jslib/jquery/jquery.js"></script>
+<script language="javascript" src="/module/jslib/urite/urite.min.js"></script>
+<link href="/module/jslib/tag/css/infotag.css" type=text/css rel=stylesheet>
+<meta name='WebId' content='38'>
+
+<meta name="renderer" content="webkit">
+<link type="text/css" href="/images/318/hanweb.css" rel="stylesheet"/>
+<link rel="stylesheet" href="/images/318/mob_column.css" type="text/css"/>
+<script src="/images/318/jquery.js"></script>
+<style type="text/css">
+body {
+  font-family:'Microsoft Yahei'; /**根据项目自行修改**/
+}
+a{color:#333}
+a:hover{ color:#1b407b;}
+</style>
+
+
+<title>盐城市发展和改革委员会 通知公告</title>
+<meta name='Maketime' content='2024-04-09 15:56:38'>
+<meta name="SiteName" content="盐城市发展和改革委员会">
+<meta name="SiteDomain" content="fgw.yancheng.gov.cn">
+<meta name="SiteIDCode" content="">
+<meta name="ColumnName" content="通知公告">
+<meta name="ColumnDescription" content="">
+<meta name="ColumnKeywords" content="">
+<meta name="ColumnType" content="">
+<meta name="channel" content="通知公告">
+<meta name="chnlcatalog" content="">
+<meta name="server" content="http://fgw.yancheng.gov.cn/col/col2651/index.html,,">
+</head>
+<body >
+<!--头部开始-->
+<script src="/script/0/1810191043316501.js"></script>
+<!--头部结束-->
+
+
+<!--当前位置开始-->
+<div class="lm-con">
+<div class="bt-box" style="background:#fff;padding-top: 15px;">
+	<div class="position bt-box-1200">
+		<div class="position-txt w">
+			<table cellspacing="0" cellpadding="0" border="0"><tr><td style="width:30px; text-align:center;"><img style="margin-top:-3px;"  title="tb3.png" src="/picture/0/1810191408490377583.png"></td><td>当前位置：</td><td><a href="/index.html" class="bt_link">首页</a></td><td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td> > <a href="/col/col2650/index.html" class="bt_link">部门资讯</a></td><td> > <a href="/col/col2651/index.html" class="bt_link">通知公告</a></td>
+</tr></table></td></tr></table>
+	<div class="nav_help" style="display: none">
+<table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td>
+            <li class="nav_help_sub"><a href="/index.html">首页</a></li>
+        </td>
+        <td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>>
+            <li class="nav_help_sub"><a href="/col/col2650/index.html">部门资讯</a>
+            </li>
+            </td><td>>
+            <li class="nav_help_sub"><a href="/col/col2651/index.html">通知公告</a>
+            </li>
+            </td>
+</tr></table></td>
+    </tr>
+</table></div>
+			</div>
+</div>
+<!--当前位置结束-->
+<div class="bt-note-20"><!--华丽的分割线--></div>
+
+<!--栏目开始-->
+<div class="bt-column-y"><!--宋体和雅黑的总开关: s代表宋体=y代表雅黑 -->
+	<div class=" bt-column-menu bt-left">
+    	<div class="bt-left-title"><span>部门资讯</span></div>
+        <div class="bt-left-con">
+        	<style>
+.lanmu_old{font-size:15px;line-height:45px;background:url(/picture/0/1810191408490248374.png) 10px 17px no-repeat; color:#3d3d3d; text-align:left; padding-left:25px;}
+.lanmu_On{font-size:15px;line-height:45px;background:url(/picture/0/1810191408490176669.png) 10px 17px no-repeat; color:#0783d0;text-align:left; padding-left:25px;}
+</style>
+
+<li><a title="通知公告" href='/col/col2651/index.html'><div id="通知公告" class="lanmu_old">
+通知公告</div></a></li>
+
+
+<li><a title="发改要闻" href='/col/col2652/index.html'><div id="发改要闻" class="lanmu_old">
+发改要闻</div></a></li>
+
+
+<li><a title="政声传递" href='/col/col2653/index.html'><div id="政声传递" class="lanmu_old">
+政声传递</div></a></li>
+
+
+<li><a title="市内要闻" href='/col/col2654/index.html'><div id="市内要闻" class="lanmu_old">
+市内要闻</div></a></li>
+
+
+<li><a title="图片资讯" href='/col/col2656/index.html'><div id="图片资讯" class="lanmu_old">
+图片资讯</div></a></li>
+
+
+<li><a title="民生价格" href='/col/col22009/index.html'><div id="民生价格" class="lanmu_old">
+民生价格</div></a></li>
+
+
+<li><a title="房价公示" href='/col/col33608/index.html'><div id="房价公示" class="lanmu_old">
+房价公示</div></a></li>
+
+
+
+        </div>
+    </div>
+    
+	<div class="bt-column-cen">
+		<div class="bt-rig-title">
+<span style="font-size:16px;font-weight:bold;">通知公告</span>
+
+</div>
+        <div class="bt-rig-cen-01"><!--01代表有下划线，02代码无下划线-->
+        	<div id="8377"><script type="text/xml"><datastore>
+<nextgroup><![CDATA[<a href="/module/web/jpage/dataproxy.jsp?page=1&appid=1&appid=1&webid=38&path=/&columnid=2651&unitid=8377&webname=%25E7%259B%2590%25E5%259F%258E%25E5%25B8%2582%25E5%258F%2591%25E5%25B1%2595%25E5%2592%258C%25E6%2594%25B9%25E9%259D%25A9%25E5%25A7%2594%25E5%2591%2598%25E4%25BC%259A&permissiontype=0"></a>]]></nextgroup>
+<recordset>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="lm_tabe">
+  
+</table>
+<style>
+.lm_tabe{width:100%}
+.lm_tabe td{border-bottom:#CCC dashed 1px;}
+.lm_tabe .qz_pic{margin:12px 10px 0 0px; float:left}
+.lm_tabe a {display:block; line-height:30px; float:left; font-size:16px; width:690px; }
+</style><record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2024/4/9/art_2651_4174916.html' title='盐城市发展和改革委员会关于公布2024年一季度市区燃煤供热价格的通知' target="_blank">盐城市发展和改革委员会关于公布2024年一季度市区燃煤供热价格的通知</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2024-04-09</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2024/4/9/art_2651_4174913.html' title='2024年盐城市新能源产业融合集群发展试点专项资金项目遴选服务采购公告' target="_blank">2024年盐城市新能源产业融合集群发展试点专项资金项目遴选服务采购公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2024-04-09</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2024/4/8/art_2651_4174416.html' title='盐城市新能源产业融合集群发展专项资金项目遴选服务委托招标代理机构中标结果公示' target="_blank">盐城市新能源产业融合集群发展专项资金项目遴选服务委托招标代理机构中标结果公示</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2024-04-08</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2024/4/3/art_2651_4173080.html' title='市发改委关于公布盐城市实行政府定价管理的经营服务性收费目录清单的通知' target="_blank">市发改委关于公布盐城市实行政府定价管理的经营服务性收费目录清单的通知</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2024-04-03</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2024/4/3/art_2651_4172971.html' title='关于举行《盐城市海洋经济促进条例（草案）》立法听证会的公告' target="_blank">关于举行《盐城市海洋经济促进条例（草案）》立法听证会的公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2024-04-03</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2024/4/1/art_2651_4171917.html' title='盐城市Y2001工程绿化工程中标结果公示' target="_blank">盐城市Y2001工程绿化工程中标结果公示</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2024-04-01</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2024/3/25/art_2651_4169749.html' title='盐城市政商交往“十要十严禁”清单' target="_blank">盐城市政商交往“十要十严禁”清单</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2024-03-25</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2024/3/19/art_2651_4167233.html' title='盐城市Y2001工程绿化工程招标公告' target="_blank">盐城市Y2001工程绿化工程招标公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2024-03-19</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2024/3/11/art_2651_4164256.html' title='盐城市发展和改革委员会关于公布盐城市市级清费降本减负政策文件目录和执行政府定价的价格和收费减免与优惠政策清单的通知' target="_blank">盐城市发展和改革委员会关于公布盐城市市级清费降本减负政策文件目录和执行政府定价的...</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2024-03-11</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2024/3/4/art_2651_4161652.html' title='民生价格政策解读' target="_blank">民生价格政策解读</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2024-03-04</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2024/2/27/art_2651_4155027.html' title='关于做好《省发展改革委 省司法厅关于公布江苏省实行政府指导价管理的公证服务项目目录及收费标准的通知》贯彻落实工作的通知' target="_blank">关于做好《省发展改革委 省司法厅关于公布江苏省实行政府指导价管理的公证服务项目目...</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2024-02-27</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2024/1/11/art_2651_4133591.html' title='2023年度盐城市新能源产业融合集群专项资金拟立项项目公示' target="_blank">2023年度盐城市新能源产业融合集群专项资金拟立项项目公示</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2024-01-11</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2024/1/5/art_2651_4130911.html' title='2023年发改专线视频会议系统终端设备采购项目中标结果公告' target="_blank">2023年发改专线视频会议系统终端设备采购项目中标结果公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2024-01-05</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2024/1/3/art_2651_4129805.html' title='省发展改革委关于做好煤电容量电价机制改革有关工作的通知' target="_blank">省发展改革委关于做好煤电容量电价机制改革有关工作的通知</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2024-01-03</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2024/1/3/art_2651_4129803.html' title='关于进一步明确我市公共资源交易服务收费政策的通知' target="_blank">关于进一步明确我市公共资源交易服务收费政策的通知</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2024-01-03</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2024/1/2/art_2651_4129124.html' title='2023年度盐城市市直粮食企业信用等级初评结果公示' target="_blank">2023年度盐城市市直粮食企业信用等级初评结果公示</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2024-01-02</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/12/15/art_2651_4118892.html' title='2023年发改专线视频会议系统终端设备采购项目招标公告' target="_blank">2023年发改专线视频会议系统终端设备采购项目招标公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-12-15</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/11/14/art_2651_4087422.html' title='关于明确我市普惠养老服务签约价格指导区间的通知' target="_blank">关于明确我市普惠养老服务签约价格指导区间的通知</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-11-14</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/11/13/art_2651_4086797.html' title='中共盐城市发展和改革委员会党组关于市委巡察整改进展情况的通报' target="_blank">中共盐城市发展和改革委员会党组关于市委巡察整改进展情况的通报</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-11-13</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/11/10/art_2651_4086245.html' title='转供电环节收费政策公告' target="_blank">转供电环节收费政策公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-11-10</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/11/9/art_2651_4085268.html' title='盐城市人民防空方案编修项目中标结果公告' target="_blank">盐城市人民防空方案编修项目中标结果公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-11-09</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/11/9/art_2651_4085266.html' title='盐城市重要经济目标防护预案修编项目中标结果公告' target="_blank">盐城市重要经济目标防护预案修编项目中标结果公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-11-09</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/11/9/art_2651_4085223.html' title='盐城市发展和改革委员会关于公布2023年四季度等市区燃煤供热价格的通知' target="_blank">盐城市发展和改革委员会关于公布2023年四季度等市区燃煤供热价格的通知</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-11-09</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/11/7/art_2651_4084318.html' title='盐城市人防项目出入口增设防汛设备项目中标结果公告' target="_blank">盐城市人防项目出入口增设防汛设备项目中标结果公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-11-07</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/11/3/art_2651_4082804.html' title='盐城市人民防空方案编修项目询价公告' target="_blank">盐城市人民防空方案编修项目询价公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-11-03</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/11/3/art_2651_4082803.html' title='盐城市重要经济目标防护预案修编项目询价公告' target="_blank">盐城市重要经济目标防护预案修编项目询价公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-11-03</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/10/31/art_2651_4080037.html' title='关于盐城市2023年度市级救灾物资储备采购项目委托招标代理机构的选聘公告' target="_blank">关于盐城市2023年度市级救灾物资储备采购项目委托招标代理机构的选聘公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-10-31</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/10/17/art_2651_4072763.html' title='盐城市K4等12条公交线路票价审批表' target="_blank">盐城市K4等12条公交线路票价审批表</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-10-17</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/10/14/art_2651_4071702.html' title='盐城市人防项目出入口增设防汛设备项目招标公告' target="_blank">盐城市人防项目出入口增设防汛设备项目招标公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-10-14</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/10/7/art_2651_4065348.html' title='省发展改革委关于进一步明确住宅小区电动自行车集中充电服务费价格政策的通知' target="_blank">省发展改革委关于进一步明确住宅小区电动自行车集中充电服务费价格政策的通知</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-10-07</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/9/18/art_2651_4058629.html' title='盐城市发展和改革委员会500kVA正式用电工程中标结果公示' target="_blank">盐城市发展和改革委员会500kVA正式用电工程中标结果公示</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-09-18</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/9/18/art_2651_4058608.html' title='省发展改革委关于进一步明确我省电动汽车充换电设施用电价格有关事项的通知' target="_blank">省发展改革委关于进一步明确我省电动汽车充换电设施用电价格有关事项的通知</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-09-18</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/9/5/art_2651_4053104.html' title='关于绿色低碳发展示范区课题研究项目成交结果公告' target="_blank">关于绿色低碳发展示范区课题研究项目成交结果公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-09-05</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/9/5/art_2651_4053102.html' title='盐城市发展和改革委员会500kVA正式用电工程招标公告' target="_blank">盐城市发展和改革委员会500kVA正式用电工程招标公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-09-05</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/8/31/art_2651_4050687.html' title='关于公开发布《“盐有信”个人信用分评价指标体系》的公告' target="_blank">关于公开发布《“盐有信”个人信用分评价指标体系》的公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-08-31</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/8/31/art_2651_4050611.html' title='关于优化公共资源交易服务收费管理有关事项的通知' target="_blank">关于优化公共资源交易服务收费管理有关事项的通知</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-08-31</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/8/31/art_2651_4050607.html' title='关于做好居民住宅小区电动自行车集中充电设施建设管理有关工作的通知' target="_blank">关于做好居民住宅小区电动自行车集中充电设施建设管理有关工作的通知</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-08-31</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/8/24/art_2651_4046509.html' title='盐城市“十四五”规划《纲要》实施中期评估调查问卷' target="_blank">盐城市“十四五”规划《纲要》实施中期评估调查问卷</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-08-24</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/8/23/art_2651_4046248.html' title='关于绿色低碳发展示范区课题研究项目竞争性磋商采购公告' target="_blank">关于绿色低碳发展示范区课题研究项目竞争性磋商采购公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-08-23</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/8/23/art_2651_4045929.html' title='2023年盐城市新能源产业融合集群发展专项资金项目遴选服务成交结果公告' target="_blank">2023年盐城市新能源产业融合集群发展专项资金项目遴选服务成交结果公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-08-23</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/8/22/art_2651_4045700.html' title='Y2001工程人防指挥信息系统集成项目成交结果公告' target="_blank">Y2001工程人防指挥信息系统集成项目成交结果公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-08-22</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/8/18/art_2651_4044511.html' title='2023年盐城市新能源产业融合集群发展专项资金项目遴选服务采购公告' target="_blank">2023年盐城市新能源产业融合集群发展专项资金项目遴选服务采购公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-08-18</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/8/17/art_2651_4043758.html' title='关于2023年盐城市新能源产业融合集群发展专项资金项目遴选服务委托招标代理机构选聘结果的公示' target="_blank">关于2023年盐城市新能源产业融合集群发展专项资金项目遴选服务委托招标代理机构选...</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-08-17</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/8/15/art_2651_4042973.html' title='关于2023年盐城市新能源产业融合集群发展专项资金项目遴选服务委托招标代理机构的选聘公告' target="_blank">关于2023年盐城市新能源产业融合集群发展专项资金项目遴选服务委托招标代理机构的...</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-08-15</td>  </tr>  ]]></record>
+<record><![CDATA[
+  <tr>    <td height="45" align="left">    <span class="qz_pic"><img src='/picture/0/1810191408490451255.gif' align='absmiddle' border='0'></span>    <a href='/art/2023/8/15/art_2651_4042912.html' title='新型电力系统下推动储能与新能源协调发展之研究成交结果公告' target="_blank">新型电力系统下推动储能与新能源协调发展之研究成交结果公告</a>    </td>    <td width="150" align="right" class="bt_time" style="font-size:16px;border-bottom:dashed 1px #ccc; color:#666666;">2023-08-15</td>  </tr>  ]]></record>
+</recordset>
+</datastore></script></div><link rel="stylesheet" type="text/css" href="/module/web/jpage/theme/default/css/jpage.css"/><script language="javascript" src="/module/jslib/datepicker/WdatePicker.js"></script><script language="javascript" src="/module/jslib/jquery/cookie/jquery.cookie.js"></script><script language="javascript" src="/module/web/jpage/jquery.jpage.js"></script><script>var param_8377 = {col:1,appid:'1',webid:38,path:'/',columnid:2651,sourceContentType:1,unitid:'8377',webname:'盐城市发展和改革委员会',permissiontype:0}; function jpage_8377(){$('#jpageform_8377 :input').each(function(){param_8377[$(this).attr('name')]=$(this).val();});$('#8377').jpage({themeName:'default',showMode:'full',totalRecord:1000,openCookies:false,dataBefore:'<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="lm_tabe">  ',dataAfter:'</table><style>.lm_tabe{width:100%}.lm_tabe td{border-bottom:#CCC dashed 1px;}.lm_tabe .qz_pic{margin:12px 10px 0 0px; float:left}.lm_tabe a {display:block; line-height:30px; float:left; font-size:16px; width:690px; }</style>',groupSize:3,proxyUrl:'/module/web/jpage/dataproxy.jsp',perPage:15,barPosition:'bottom',ajaxParam:param_8377});};$(function(){$('#8377').jpage({themeName:'default',showMode:'full',totalRecord:397,openCookies:false,dataBefore:'<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="lm_tabe">  ',dataStore:$('#8377').children('script').html(),dataAfter:'</table><style>.lm_tabe{width:100%}.lm_tabe td{border-bottom:#CCC dashed 1px;}.lm_tabe .qz_pic{margin:12px 10px 0 0px; float:left}.lm_tabe a {display:block; line-height:30px; float:left; font-size:16px; width:690px; }</style>',groupSize:3,proxyUrl:'/module/web/jpage/dataproxy.jsp',perPage:15,barPosition:'bottom',ajaxParam:param_8377});});</script>
+        </div>
+    </div>
+    <div class="bt-clear"><!--清除浮动--></div>
+</div>
+<!--栏目结束-->
+
+</div>
+</div>
+<!--页脚开始-->
+<script src="/script/0/1539916433185.js"></script>
+<!--页脚结束-->
+<!--页脚开始-->
+<script>
+    $("#通知公告").addClass("lanmu_On")</script>
+<!--页脚结束-->
+
+<!-- visitcount Begin --><iframe src='../../module/visitcount/visit.jsp?type=2&i_webid=38&i_columnid=2651' name="vishidden" id="vishidden" frameborder="0" style="width:0; height:0; display:none"></iframe><!-- visitcount End -->
+
+<script language="javascript" src='/script/web_front.js'></script>
+</body>
+</html>
