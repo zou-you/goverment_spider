@@ -15,6 +15,7 @@ from utils import sleep_time, title_pattern, content_pattern, write_file, now, M
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 requests.packages.urllib3.disable_warnings()
+
 GOVERMENT = "陕西省科技厅"
 
 

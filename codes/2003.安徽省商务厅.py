@@ -68,6 +68,7 @@ def get_content(start_date=now):
         for record in records:
             news_num += 1
             href, title, date = record
+            title = title.strip().replace('·', '').replace('\n', '')
             if date < start_date:
                 if news_num <= 10:      # 首页前几条可能不是最新的
                     continue

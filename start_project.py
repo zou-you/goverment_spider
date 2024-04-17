@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 import os
+import re
 from datetime import datetime
 import argparse
 from pathlib import Path
@@ -38,6 +39,12 @@ def get_args():
         "--only_start_date",
         action='store_true',
         help="Only the start date is recorded",
+    )
+
+    parser.add_argument(
+        "--only_save_file",
+        action='store_true',
+        help="Save only the resulting file",
     )
 
     parser.add_argument(
@@ -100,34 +107,39 @@ def crate_xlsx_file(now, year_month, start_date, only_start_date=False):
     for region in REGIONS:
         data_list = []
         path_list = Path(f"files/{year_month}/{now}/{region}")
-        for path in path_list.iterdir():
+        for path in sorted(path_list.iterdir()):
             data_list = read_txt_file(path, data_list=data_list)
         data_all[region] = data_list
 
     data2Excel(now, year_month, data_all, start_date, only_start_date)
 
 
-def start(start_date, only_start_date=False):
+def start(start_date, only_start_date=False, only_save_file=False):
     now, year_month = get_date(yesterday=True)    # 定时任务，这里需要每天计算
     if not start_date:
         start_date = now
 
     logger.info(f'开始爬取时间 {start_date}')
-    path = "./codes/"
-    file_name_list = os.listdir(path)
+    code_path = "./codes/"
+    file_list = os.listdir(code_path)
     py_file = []
-    py_file_sort = []
-    for i in file_name_list:
-        if i.split('.')[-1] == 'py':
-            py_file.append(i)
-    for i in range(0, len(py_file)):
-    # for i in range(0, 1):
-        for j in py_file:
-            if int(i)+1 == int(j.split('.')[0]):
-                py_file_sort.append(j)
-    logger.info(f'运行文件列表： {py_file_sort}')
-    for file in py_file_sort:
-        os.system(f'python3 codes/{file} --start_date {start_date}')
+
+    # 转换成 (数字部分, 原始文件名) 的元组列表
+    for item in file_list:
+        num = int(re.search(r'\d+', item).group())
+        py_file.append((num, item))
+    
+    # 使用 sorted 进行排序
+    py_file = sorted(py_file)
+
+    # 提取排序后的文件名
+    py_file_sort = [filename for _, filename in py_file]    
+
+    # 运行爬虫文件
+    if not only_save_file:
+        logger.info(f'运行文件列表： {py_file_sort}')
+        for file in py_file_sort:
+            os.system(f'python3 codes/{file} --start_date {start_date}')
 
     # 采集完成，写入excel
     crate_xlsx_file(now, year_month, start_date, only_start_date)
@@ -141,4 +153,4 @@ if __name__ == "__main__":
         print("定时任务启动")
         schedule_daily_task(start, task_args=(args.start_date, ), hour=1, minute=0)
     else:
-        start(args.start_date, args.only_start_date)
+        start(args.start_date, args.only_start_date, args.only_save_file)

@@ -13,7 +13,7 @@ sys.path.extend(['.', '..'])
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 from utils import sleep_time, title_pattern, content_pattern, write_file, now, MyHeaders, logger, timeout
-
+requests.packages.urllib3.disable_warnings()
 
 GOVERMENT = "陕西省工信厅"
 
