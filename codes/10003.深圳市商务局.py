@@ -69,14 +69,14 @@ def get_content(start_date=now):
             title = text['title'].strip().replace('·', '').replace('\n', '')  # 获取纯文本内容（不带html标签）
             if re.search(title_pattern, title):  # 匹配标签关键字
                 logger.info(f"{title}\t{date}")
-                url_list.append(text['href'])
+                url_list.append(text['href'].replace("https", "http"))
                 date_list.append(date)
                 title_list.append(title)
 
         # 进行翻页查找
         page_data = bs.find('a', {'class': 'next'})
         if page_data and page_data['href'] != url_index:
-            url_index = page_data['href']
+            url_index = page_data['href'].replace("https", "http")
             page_num += 1
             # 随机睡眠
             time.sleep(sleep_time)

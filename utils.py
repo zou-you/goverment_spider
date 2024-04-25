@@ -108,5 +108,5 @@ logger = setup_logger(
     log_name='Spider System',
     log_filename=Path('logs/spider.log'),
     log_level='info',
-    use_console=True
+    use_console=False
 )
