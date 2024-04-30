@@ -57,6 +57,7 @@ def get_content(start_date=now):
     url_list, date_list, title_list = [], [], []
     page_turning = True  # 是否需要翻页
     page_num = 1
+    continue_count = 0
     while page_turning:
         logger.info(f"当前页：{page_num}")
 
@@ -70,13 +71,14 @@ def get_content(start_date=now):
             # 解析json
             json_data = json.loads(response.text)
             data_results = json_data['data']['searchResult']['dataResults']
+            if data_results is None and continue_count < 3:
+                continue_count += 1
+                continue
         except TypeError:
             time.sleep(2)
-            response = get_response(url_index)
-
-            # 解析json
-            json_data = json.loads(response.text)
-            data_results = json_data['data']['searchResult']['dataResults']
+            if continue_count < 3:
+                continue_count += 1
+                continue
 
         for data in data_results:
             data_ = data['data']
