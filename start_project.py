@@ -139,7 +139,7 @@ def start(start_date, only_start_date=False, only_save_file=False):
     if not only_save_file:
         logger.info(f'运行文件列表： {py_file_sort}')
         for file in py_file_sort:
-            os.system(f'python3 codes/{file} --start_date {start_date}')
+            os.system(f'python3 {code_path}/{file} --start_date {start_date}')
 
     # 采集完成，写入excel
     crate_xlsx_file(now, year_month, start_date, only_start_date)

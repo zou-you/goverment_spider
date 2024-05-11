@@ -3,6 +3,7 @@ import requests
 import datetime
 import time
 import sys
+import os
 import io
 import re
 import random
@@ -99,9 +100,26 @@ def get_content(start_date=now):
 if __name__ == "__main__":
     args = get_args()
     
-    logger.info(f"{'-'*20}{GOVERMENT}开始抓取{'-'*20}")
-    try:
-        get_content(args.start_date)
-    except Exception as e:
-        logger.error(f"{e}")
-    logger.info(f"{'-'*20}{GOVERMENT}抓取完成{'-'*20}\n\n")
+    # 获取当前文件路径
+    current_file_path = __file__
+    # 使用 os.path.basename() 函数获取文件名，然后使用 os.path.splitext() 函数分割文件名和后缀
+    current_file_name = os.path.splitext(os.path.basename(current_file_path))[0]
+
+    # 记录最大尝试次数
+    attempts, max_attempts = 0, 3
+
+    # 开始抓取
+    logger.info(f"{'-'*20}{current_file_name} 开始抓取{'-'*20}")
+    while attempts < max_attempts:
+        try:
+            get_content(args.start_date)
+            break  # 如果代码成功执行，跳出循环
+        except Exception as e:
+            attempts += 1  # 增加尝试次数
+            logger.error(f"{e}")
+            time.sleep(2)
+            if attempts == max_attempts:
+                logger.error("已达到最大尝试次数，程序终止。")
+            else:
+                logger.info(f"当前重试次数{attempts}...")
+    logger.info(f"{'-'*20}{current_file_name} 抓取完成{'-'*20}\n\n")
