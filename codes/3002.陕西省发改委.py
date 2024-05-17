@@ -84,7 +84,10 @@ def get_content(start_date=now):
     # 进入详情页查找关键字
     for index, url_detail in enumerate(url_list):
         bs = get_bs(url_detail)
-        title = bs.find('div', class_='title').get_text(strip=True).strip().replace('·', '').replace('\n', '')
+        title = bs.find('div', class_='title')
+        if not title:
+            title = bs.find('h2', class_='article_title')
+        title = title.get_text(strip=True).strip().replace('·', '').replace('\n', '')
         if title_pattern.search(title):  # 匹配标签关键字
             logger.info(f"{title}\t{date_list[index]}")
             text = bs.get_text(strip=True)
