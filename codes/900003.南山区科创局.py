@@ -82,7 +82,7 @@ def get_content(start_date=now):
             title = article.get("title", "").strip().replace("\n", '')
             if re.search(title_pattern, title):  # 匹配标签关键字
                 logger.info(f"{title}\t{date}")
-                url_list.append(article.get("url", ""))      # 需要拼接url
+                url_list.append(article.get("url", "").replace("https", "http"))      # 需要拼接url
                 date_list.append(date)
                 title_list.append(title)
 
