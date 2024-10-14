@@ -47,7 +47,7 @@
 
 ## 单独爬取某个政府网站
 
-> python 101.国家工信部.py
+> python codes/101.国家工信部.py
 
 ## 运行从指定日期到昨天
 
@@ -56,4 +56,8 @@
 ## 单独运行指定日期
 
 > python start_project.py --start_date 2024-02-03 --only_start_date
+
+## 单独跑一次
+> python start_project.py 
+可以在log/spider.log 中查看，跑之前需要切换环境 act spider
 
