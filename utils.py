@@ -92,11 +92,12 @@ for region in REGIONS:
 os.makedirs(f'xls_files/{year_month}', exist_ok=True)
 
 # 读取关键词
-title_keys = ['通知', '文件']
-content_keys = read_key_words()
+title_keys = ['通知', '文件', '公告']   # 只匹配以该关键词结尾的标题
+add_keys = ['以旧换新', '设备更新']     # 匹配包含该部分关键词的标题
+content_keys = read_key_words()         # 内容关键词
 
 # 设置关键词匹配模式
-title_pattern = re.compile('(?=（.*?）|$)|'.join(title_keys) + r"(?=（.*?）|$)")
+title_pattern = re.compile('(?=（.*?）|$)|'.join(title_keys) + r"(?=（.*?）|$)" + r'|'.join(add_keys))
 content_pattern = re.compile('|'.join(content_keys))
 
 # 生成随机睡眠时间
