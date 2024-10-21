@@ -15,7 +15,7 @@ from utils import sleep_time, title_pattern, content_pattern, write_file, now, M
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 requests.packages.urllib3.disable_warnings()
-GOVERMENT = "山西省商务厅"
+GOVERMENT = "山西省以旧换新专题"
 
 
 def get_args():
@@ -43,41 +43,35 @@ def get_bs(url):
 
 @timeout(3600)
 def get_content(start_date=now):
-    url_index = "http://swt.shanxi.gov.cn/xxgk/xxgkzl/xxgklm/gztz_69874/"
+    url_index = "http://swt.shanxi.gov.cn/ztzl/swlyjlzcxf/"
 
     url_list, date_list, title_list = [], [], []
     page_turning = True  # 是否需要翻页
     page_num = 1
-
-    # 使用正则表达式提取 href 属性
-    href_pattern = re.compile(r'href\s*=\s*["\']?([^"\'>]+)["\']?')
-
     while page_turning:
         logger.info(f"当前页：{page_num}")
 
         # 访问链接
         bs = get_bs(url_index)
-        text_list = bs.select('.list.list_down div[id]')
-        time_list = bs.select('.list.list_down .time_item')
-        href_list = bs.select('.list.list_down script')
+        text_list = bs.select('.t_text1.mb_10 a')
+        time_list = bs.select('.t_text1.mb_10 span')
 
         # 找出符合要求的时间以及标题
-        for text, tim, href in zip(text_list, time_list, href_list):
+        for text, tim in zip(text_list, time_list):
             date = tim.get_text(strip=True)
             if date < start_date:
                 if page_num == 1:      # 首页前几条可能不是最新的
                     continue
                 page_turning = False
                 break
-            title = text.get_text(strip=True).replace('·', '').replace('\n', '')  # 获取纯文本内容（不带html标签）
-            if re.search(title_pattern, title):  # 匹配标签关键字
-                logger.info(f"{title}\t{date}")
-                href_ = href_pattern.findall(href.string)[0]
-                if not href_.startswith('http'):
-                    href_ = "http://swt.shanxi.gov.cn/xxgk/xxgkzl/xxgklm/gztz_69874/" + href_.replace('./', '', 1)
-                url_list.append(href_)
-                date_list.append(date)
-                title_list.append(title)
+            title = text['title'].strip().replace('·', '').replace('\n', '')  # 以旧换新专题不进行标题匹配
+            logger.info(f"{title}\t{date}")
+            href = text['href']
+            if not href.startswith('http'):
+                href = 'http://swt.shanxi.gov.cn/ztzl/swlyjlzcxf/' + href.replace('./', '', 1)
+            url_list.append(href)
+            date_list.append(date)
+            title_list.append(title)
 
         # 不进行翻页查找
         break
@@ -88,8 +82,9 @@ def get_content(start_date=now):
         bs = get_bs(url_detail)
         text = bs.get_text(strip=True)
         match_res = set(content_pattern.findall(text))
-        if match_res:
-            result += f"{GOVERMENT}\t{','.join(list(match_res))}\t{title_list[index]}\t{date_list[index]}\t{url_detail}\n"
+        if not match_res:
+            match_res = set(['以旧换新专题'])
+        result += f"{GOVERMENT}\t{','.join(list(match_res))}\t{title_list[index]}\t{date_list[index]}\t{url_detail}\n"
 
         # 随机睡眠
         time.sleep(sleep_time)
