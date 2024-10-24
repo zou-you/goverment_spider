@@ -15,7 +15,7 @@ from utils import sleep_time, title_pattern, content_pattern, write_file, now, M
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 requests.packages.urllib3.disable_warnings()
-GOVERMENT = "上海市商务委"
+GOVERMENT = "长沙市商务局"
 
 
 def get_args():
@@ -43,7 +43,7 @@ def get_bs(url):
 
 @timeout(3600)
 def get_content(start_date=now):
-    url_index = "https://sww.sh.gov.cn/zxxxgk/index.html"
+    url_index = "http://swt.changsha.gov.cn/zfxxgk/tzgg_35733/"
 
     url_list, date_list, title_list = [], [], []
     page_turning = True  # 是否需要翻页
@@ -53,8 +53,8 @@ def get_content(start_date=now):
 
         # 访问链接
         bs = get_bs(url_index)
-        text_list = bs.select('.column-box_news-list_news-item a')
-        time_list = bs.select('.text.text-article-time')
+        text_list = bs.select('.list.list-date a')
+        time_list = bs.select('.list.list-date span')
 
         # 找出符合要求的时间以及标题
         for text, tim in zip(text_list, time_list):
@@ -68,8 +68,6 @@ def get_content(start_date=now):
             if re.search(title_pattern, title):  # 匹配标签关键字
                 logger.info(f"{title}\t{date}")
                 href = text['href'].strip()
-                if not href.startswith('http'):
-                    href = 'https://sww.sh.gov.cn' + href
                 url_list.append(href)
                 date_list.append(date)
                 title_list.append(title)
