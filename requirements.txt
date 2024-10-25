@@ -3,3 +3,4 @@ pandas==1.4.4
 apscheduler
 bs4
 html5lib
+curl_cffi
