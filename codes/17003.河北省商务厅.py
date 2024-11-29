@@ -64,6 +64,7 @@ def get_content(start_date=now):
             if '-' not in date:
                 dt = datetime.datetime.strptime(date, '%b %d, %Y')
                 date = dt.strftime('%Y-%m-%d')
+            date = datetime.datetime.strptime(date, '%Y-%m-%d').strftime('%Y-%m-%d')
             if date < start_date:
                 if page_num == 1:      # 首页前几条可能不是最新的
                     continue
