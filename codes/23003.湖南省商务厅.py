@@ -43,7 +43,7 @@ def get_bs(url):
 
 @timeout(3600)
 def get_content(start_date=now):
-    url_index = "http://swt.hunan.gov.cn/swt/hnswt/tzgg/index.html"
+    url_index = "https://swt.hunan.gov.cn/swt/hnswt/85753/fdzdgknr/tzgg/xxgklb.html"
 
     url_list, date_list, title_list = [], [], []
     page_turning = True  # 是否需要翻页
@@ -53,8 +53,8 @@ def get_content(start_date=now):
 
         # 访问链接
         bs = get_bs(url_index)
-        text_list = bs.select('.com_list.com_list02.com_list03 a')
-        time_list = bs.select('.com_list.com_list02.com_list03 span')
+        text_list = bs.select('.zfxxch.clear_both li a')
+        time_list = bs.select('.zfxxch.clear_both li a span')
 
         # 找出符合要求的时间以及标题
         for text, tim in zip(text_list, time_list):
@@ -69,7 +69,7 @@ def get_content(start_date=now):
                 logger.info(f"{title}\t{date}")
                 href = text['href']
                 if not href.startswith('http'):
-                    href = 'http://swt.hunan.gov.cn/' + href.replace('./', '', 1)
+                    href = 'https://swt.hunan.gov.cn' + href
                 url_list.append(href)
                 date_list.append(date)
                 title_list.append(title)
