@@ -44,7 +44,7 @@ def get_bs(url):
 @timeout(3600)
 def get_content(start_date=now):
 
-    url_index = 'https://sndrc.shaanxi.gov.cn/pub/sxfgwyh/sy/fgyw_117435/gggg/index.html'
+    url_index = 'https://sndrc.shaanxi.gov.cn/sy/xwxx/gggg/'
 
     url_list, date_list, title_list = [], [], []
     page_turning = True  # 是否需要翻页
@@ -67,18 +67,12 @@ def get_content(start_date=now):
 
             url = text['href']
             if "https" not in url:
-                url = "https://sndrc.shaanxi.gov.cn/pub/sxfgwyh/sy/fgyw_117435/gggg/" + url
+                url = "https://sndrc.shaanxi.gov.cn/sy/xwxx/gggg" + url.replace('.', '', 1)
             url_list.append(url)
             date_list.append(date)
 
-        # 进行翻页查找
-        if page_num != 20:
-            url_index = f"https://sndrc.shaanxi.gov.cn/pub/sxfgwyh/sy/fgyw_117435/gggg/index_{page_num}.html"
-            page_num += 1
-            # 随机睡眠
-            time.sleep(sleep_time)
-        else:
-            break
+        # 不进行翻页查找
+        break
 
     result = ''
     # 进入详情页查找关键字

@@ -44,7 +44,7 @@ def get_bs(url):
 @timeout(3600)
 def get_content(start_date=now):
 
-    url_index = 'http://gxt.shaanxi.gov.cn/webfile/tzgg/index.html'
+    url_index = 'https://gxt.shaanxi.gov.cn/xw/tzgg/'
 
     url_list, date_list, title_list = [], [], []
     page_turning = True  # 是否需要翻页
@@ -54,8 +54,8 @@ def get_content(start_date=now):
 
         # 访问链接
         bs = get_bs(url_index)
-        text_list = bs.select('.c-newslist-content-right-list-item-text')
-        time_list = bs.select('.c-newslist-content-right-list-item-time')
+        text_list = bs.select('.clearfix a')
+        time_list = bs.select('.clearfix span')
 
         for text, tim in zip(text_list, time_list):
             date = tim.get_text(strip=True).strip('【').strip('】')
@@ -67,19 +67,15 @@ def get_content(start_date=now):
             title = text.get_text(strip=True).strip().replace('·', '').replace('\n', '')  # 获取纯文本内容（不带html标签）
             if title_pattern.search(title):  # 匹配标签关键字
                 logger.info(f"{title}\t{date}")
-                url_list.append(text['href'])
+                href = text['href'].strip()
+                if not href.startswith('http'):
+                    href = 'https://gxt.shaanxi.gov.cn/xw/tzgg' + href.replace('.', '', 1)
+                url_list.append(href)
                 date_list.append(date)
                 title_list.append(title)
 
-        # 进行翻页查找
-        page_data = bs.find('a', {'aria-label': 'Next'})
-        if page_data and page_data['href'] != url_index:
-            url_index = page_data['href']
-            page_num += 1
-            # 随机睡眠
-            time.sleep(sleep_time)
-        else:
-            break
+        # 不进行翻页查找
+        break
 
     result = ''
     # 进入详情页查找关键字

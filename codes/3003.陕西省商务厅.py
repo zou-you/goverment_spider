@@ -37,7 +37,7 @@ def get_args():
 def get_bs(url):
     headers = {'User-Agent': random.choice(MyHeaders)}
     response = requests.get(url, headers=headers, verify=False)
-    response.encoding = 'gbk'
+    response.encoding = 'utf-8'
     bs = BeautifulSoup(response.text, 'html5lib')
 
     return bs
@@ -45,7 +45,7 @@ def get_bs(url):
 @timeout(3600)
 def get_content(start_date=now):
 
-    url_index = "http://sxdofcom.shaanxi.gov.cn/newstyle/pub_newschannel.asp?chid=100258"
+    url_index = "https://sxdofcom.shaanxi.gov.cn/sy/tzgg/zytz/"
 
     url_list, date_list, title_list = [], [], []
     page_turning = True  # 是否需要翻页
@@ -55,43 +55,40 @@ def get_content(start_date=now):
 
         # 访问链接
         bs = get_bs(url_index)
-        text_list = bs.select(".morelmr div ul li a")
-        time_list = bs.select('.morelmr [style="float:right"]')
+        item_list = bs.select('.list-item .clearfix')
 
         # 找出符合要求的时间以及标题
-        for text, tim in zip(text_list, time_list):
-            date = tim.get_text(strip=True).split(' ')[0]
+        for item in item_list:
+            tim = item.find('div', {'class': 'time'})
+            date = tim.get_text(strip=True)
             if date < start_date:
                 if page_num == 1:      # 首页前几条可能不是最新的
                     continue
                 page_turning = False
                 break
+            title = item.find('div', {'class': 'text'}).get_text(strip=True).replace('·', '').replace('\n', '')
+            if title_pattern.search(title):  # 匹配标签关键字
+                logger.info(f"{title}\t{date}")
+                href = item['href']
+                if not href.startswith('http'):
+                    href = 'https://sxdofcom.shaanxi.gov.cn/sy/tzgg/zytz' + href.replace('.', '', 1)
+                url_list.append(href)
+                date_list.append(date)
+                title_list.append(title)
 
-            url_list.append("http://sxdofcom.shaanxi.gov.cn/" + text['href'])
-            date_list.append(date)
-
-        # 进行翻页查找
-        if page_num != 5:
-            page_num += 1
-            url_index = f"http://sxdofcom.shaanxi.gov.cn/newstyle/pub_newschannel.asp?Page={page_num}&chid=100258"
-            # 随机睡眠
-            time.sleep(sleep_time)
-        else:
-            break
+        # 不进行翻页查找
+        break
 
     result = ''
     # 进入详情页查找关键字
     for index, url_detail in enumerate(url_list):
         bs = get_bs(url_detail)
-        title = bs.find('div', class_='zbt').get_text(strip=True).strip().replace('·', '').replace('\n', '')
-        if title_pattern.search(title):  # 匹配标签关键字
-            logger.info(f"{title}\t{date_list[index]}")
-            text = bs.get_text(strip=True)
-            match_res = set(content_pattern.findall(text))
-            if match_res:
-                result += f"{GOVERMENT}\t{','.join(list(match_res))}\t{title}\t{date_list[index]}\t{url_detail}\n" 
-            # 随机睡眠
-            time.sleep(sleep_time)
+        text = bs.get_text(strip=True)
+        match_res = set(content_pattern.findall(text))
+        if match_res:
+            result += f"{GOVERMENT}\t{','.join(list(match_res))}\t{title_list[index]}\t{date_list[index]}\t{url_detail}\n" 
+        # 随机睡眠
+        time.sleep(sleep_time)
 
     # 写入文件
     write_file(result, now, GOVERMENT, "省级")

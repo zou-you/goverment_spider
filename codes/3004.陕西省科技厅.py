@@ -44,8 +44,8 @@ def get_bs(url):
 
 @timeout(3600)
 def get_content(start_date=now):
-    # 陕西省工业和信息化厅
-    url_index = 'https://kjt.shaanxi.gov.cn/view/iList.jsp?cat_id=221'
+    # 陕西省科技厅
+    url_index = 'https://kjt.shaanxi.gov.cn/kjdt/tzgg/'
 
     url_list, date_list, title_list = [], [], []
     page_turning = True  # 是否需要翻页
@@ -55,8 +55,8 @@ def get_content(start_date=now):
 
         # 访问链接
         bs = get_bs(url_index)
-        text_list = bs.select(".textlist.ifo_bdr li a")
-        time_list = bs.select(".textlist.ifo_bdr li span")
+        text_list = bs.select(".clearfix a")
+        time_list = bs.select(".clearfix span")
 
         # 找出符合要求的时间以及标题
         for text, tim in zip(text_list, time_list):
@@ -69,18 +69,15 @@ def get_content(start_date=now):
             title = text['title'].strip().replace('·', '').replace('\n', '')  # 获取纯文本内容（不带html标签）
             if re.search(title_pattern, title):  # 匹配标签关键字
                 logger.info(f"{title}\t{date}")
-                url_list.append("https://kjt.shaanxi.gov.cn/" + text['href'])
+                href = text['href'].strip()
+                if not href.startswith('http'):
+                    href = 'https://kjt.shaanxi.gov.cn/kjdt/tzgg' + href.replace('.', '', 1)
+                url_list.append(href)
                 date_list.append(date)
                 title_list.append(title)
 
-        # 进行翻页查找
-        if page_num != 20:
-            page_num += 1
-            url_index = f"https://kjt.shaanxi.gov.cn/view/iList.jsp?&cat_id=221&cur_page={page_num}"
-            # 随机睡眠
-            time.sleep(sleep_time)
-        else:
-            break
+        # 不进行翻页查找
+        break
 
     result = ''
     # 进入详情页查找关键字
